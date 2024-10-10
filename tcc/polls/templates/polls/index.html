@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quilombo Madeira</title>
+    <link rel="stylesheet" href="{% static 'polls/css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+   <!-- Botão para abrir o menu lateral -->
+
+  <!-- Menu lateral -->
+  <div id="mySidebar" class="sidebar">
+   
+    <i class="fas fa-user"></i>
+    <a href="{% url 'polls:login}" target="_blank">Entre</a>
+    <i class="fas fa-shopping-cart"></i>
+    <i class="fas fa-camera"></i>
+    <i class="fas fa-envelope"></i>
+    <i class="fas fa-phone"></i> 
+  </div>
+
+ 
+
+  <script src="{% static 'polls/javascript/script.js'%}"></script>
+        <div class="content">
+            <div class="header">
+                <div>
+                    <input type="text" placeholder="Buscar">
+                    <i class="fas fa-search"></i>
+                    
+                </div>
+                <button type="button" onmouseover="showMessage()" onmouseout="hideMessage()">
+                    Doações
+                    <div class="mensagem" >Brasil, Rio Grande Do Sul, Jaguarão</div>
+                    </button>
+                    <script src="{% static 'polls/javascript/script2.js'%}"></script>
+            </div>
+            
+            <div class="container-imagem">
+                <img class="vo" src="{% static 'polls/images/VoMaria.jpeg'%}" alt="Imagem">
+
+                <div class="title">
+                    <h1>Quilombo</h1>
+                        <h1>Madeira</h1>
+                
+                <div class="description">
+                    <p>Com mais de 200 anos, localizado na 3. Zona do Município de Jaguarão, no Cerrito. Reconhecido
+                        pela Fundação Cultural Palmares desde 2009.</p>
+
+                </div>
+            </div>
+            </div>
+            
+            
+            <div class="container-sum">
+                <div class="section-title">
+                    <h2>SUMÁRIO</h2>
+                </div>
+            </div>
+                <div class="section">
+                <div class="section-content">
+                    <div class="section-item">
+                        <img src="{% static 'polls/images/quilombo.jpg'%}">
+                        <a class="button-1" a href="{% url 'polls:sobre}" target="_blank">Sobre nós</a>
+                    </div>
+                    <div class="section-item">
+                        <img src="{% static 'polls/images/eventos.jpg'%}">
+                        <a class="button-2" a href="{% url 'polls:eventos'}" target="_blank">Eventos</a>
+                    </div>
+                    <div class="section-item">
+                        <img src="{% static 'polls/images/artesanatos.jpg'%}" alt="Image of vegetables">
+                        <a class="button-3" a href="{% url 'polls:marketplace'}" target="_blank">Artesanatos, Verduras e Legumes</a>
+                        
+                    </div>
+                    <div class="section-item">
+                        <img src="{% static 'polls/images/conversa.jpg'%}">
+                        <a class="button-4" a href="{% url 'polls:debate'}" target="_blank">Vamos conversa?</a>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+}
+
+.banner {
+  background-image: url("{% static 'polls/images/VoMaria.jpeg'%}"); /* Substitua "sua-imagem.jpg" pelo caminho da sua imagem */
+  background-size: cover;
+  height: 200px; /* Ajuste a altura conforme necessário */
+}
+
+.banner-content {
+  background-color: rgba(0, 0, 0, 0.5); /* Adiciona um fundo transparente escuro para a faixa */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <div class="banner-content">
+    <h1>Título da sua faixa</h1>
+    <p>Texto da sua faixa.</p>
+  </div>
+</div>
+
+</body>
+</html>

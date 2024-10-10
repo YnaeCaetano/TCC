@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artesanatos,Verduras e Legumes</title>
+    <link rel="stylesheet" href="{% static 'polls/css/marketplace.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="banner">
+        <style>
+        .banner {
+            background-image: url("{% static 'polls/images/artesanatos.jpg'%}"); /* Substitua "sua-imagem.jpg" pelo caminho da sua imagem */
+            background-size: cover;
+            height: 50px; /* Ajuste a altura conforme necessário */
+          }
+        </style>
+    </div> 
+<div class="container">
+    <div class="sidebar">
+    <div>
+        <i class="fas fa-filter"></i>
+    <h3>Filtros</h3>
+    </div>
+    <div class="filter-group">
+      <h4>Por Categoria:</h4>
+      <label>
+        <input type="checkbox">
+        Verduras
+      </label>
+      <label>
+        <input type="checkbox">
+        Legumes
+      </label>
+      <label>
+        <input type="checkbox">
+        Artesanatos
+      </label>
+    </div>
+    <div class="filter-group">
+      <h4>Faixa de Preço:</h4>
+      <input type="number" placeholder="R$ Min.">
+      <input type="number" placeholder="R$ Max.">
+    </div>
+    <div class="filter-group">
+      <h4>Promoções:</h4>
+      <label>
+        <input type="checkbox">
+        Promoções
+      </label>
+    </div>
+    <div class="filter-group">
+      <h4>Avaliações:</h4>
+      <label>
+        <input type="radio" name="rating">
+        ★★★★★
+      </label>
+      <label>
+        <input type="radio" name="rating">
+        ★★★★☆
+      </label>
+      <label>
+        <input type="radio" name="rating">
+        ★★★☆☆
+      </label>
+      <label>
+        <input type="radio" name="rating">
+        ★★☆☆☆
+      </label>
+      <label>
+        <input type="radio" name="rating">
+        ★☆☆☆☆
+      </label>
+    </div>
+  
+ 
+</div>
+    <div class="content">
+    <div class="header">
+        <div>
+            <input type="text" placeholder="Buscar">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="carrinho">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </div>
+ 
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="{% static 'polls/images/alface.jpg'%}" alt="Alface">
+      <p>Alface produzida sem agrotoxicos</p>
+      <button>Comprar</button>
+    </div>
+    <div class="product-card">
+      <img src="{% static 'polls/images/sabao.jpg'%}" alt="Artesanato">
+      <p>Artesanato feito à mão</p>
+      <button>Comprar</button>
+      <i class="	&rarr;"></i>
+    </div>
+    <div class="product-card">
+      <img src="{% static 'polls/images/cesta.jpg'%}" alt="Cesta">
+      <p>Cesta de palha</p>
+      <button>Comprar</button>
+    </div>
+    <div class="product-card">
+        <img src="{% static 'polls/images/mostarda.png'%}" alt="mostarda">
+        <p>Cesta de palha</p>
+        <button>Comprar</button>
+      </div>
+      <div class="product-card">
+        <img src="{% static 'polls/images/baiano.jpg'%}" alt="baiano">
+        <p>Cesta de palha</p>
+        <button>Comprar</button>
+      </div>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+</html>

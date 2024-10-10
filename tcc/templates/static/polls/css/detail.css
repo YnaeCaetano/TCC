@@ -1,0 +1,58 @@
+body {
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Estilos do menu lateral (sidebar) */
+  .sidebar {
+    height: 100%; /* Altura total da página */
+    width: 0; /* Largura inicial do menu (fechado) */
+    position: fixed; /* Fixa o menu na lateral esquerda */
+    z-index: 1; /* Garante que o menu fica acima de outros elementos */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Cor de fundo escura */
+    overflow-x: hidden; /* Esconde conteúdo que passar dos limites */
+    transition: 0.5s; /* Transição suave na abertura e fechamento */
+    padding-top: 60px; /* Espaçamento no topo do menu */
+  }
+  
+  /* Links dentro da sidebar */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* Mudança de cor dos links ao passar o mouse */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Botão de fechar (x) na parte superior */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Estilo do conteúdo principal */
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  /* Quando o menu lateral é aberto */
+  .sidebar-open {
+    width: 250px; /* Largura ao abrir */
+  }
+  
+  /* Quando o conteúdo principal é empurrado pelo menu lateral */
+  #main.sidebar-open {
+    margin-left: 250px; /* Empurra o conteúdo quando o menu está aberto */
+  }
+  

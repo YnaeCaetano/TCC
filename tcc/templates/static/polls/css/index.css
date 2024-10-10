@@ -1,0 +1,270 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f4e8;
+}
+
+
+
+.container { 
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    margin-left: 30px;
+    gap: 30px;
+}
+.sidebar {
+    height: 95%; /* Altura total da página */
+    width: 5%; /* Largura inicial do menu (fechado) */
+    position: fixed; /* Fixa o menu na lateral esquerda */
+    z-index: 1; /* Garante que o menu fica acima de outros elementos */
+    top: 0;
+    left: 0;
+    background-color: #7c5217; /* Cor de fundo escura */
+    overflow-x: hidden; /* Esconde conteúdo que passar dos limites */
+    transition: 0.5s; /* Transição suave na abertura e fechamento */
+    padding-top: 60px; /* Espaçamento no topo do menu */
+    align-items: center;
+  }
+  
+  /* Links dentro da sidebar */
+  .sidebar a {
+   
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+  }
+  .sidebar i {
+    font-size: 24px; 
+    margin-bottom: 30px;
+}
+  
+  /* Mudança de cor dos links ao passar o mouse */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Botão de fechar (x) na parte superior */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Estilo do conteúdo principal */
+  /*#main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  /* Quando o menu lateral é aberto */
+  .sidebar-open {
+    width: 250px; /* Largura ao abrir */
+  }
+  
+  /* Quando o conteúdo principal é empurrado pelo menu lateral */
+  /*#main.sidebar-open {
+   position: relative; /* Empurra o conteúdo quando o menu está aberto */
+  
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    border-radius: 20px;
+   
+}
+
+.header input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-left: 100px;
+    border-radius: 15px;
+    width: 900px;
+    font-size: 85%;
+    padding-left: 30px;
+
+}
+
+.header i {
+    font-size: 20px;
+    background-color: #f0ecec;
+}
+
+button{
+    position:absolute;
+    margin-left: 1250px;
+    width:100px;
+    height:30px;
+    border: none;
+    background-color: #f5f4e8;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  /* Aqui a mensagem ja está com o display none para já começar escondida*/
+  .mensagem{
+    display:none;
+    position:relative;
+    /* top: 0; Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+    left: 65px;
+    top:0.1px;
+    margin: 10px;
+    width:100px;
+    height:70px;
+    border:none;
+    border-radius: 8px;
+    background-color: sandybrown;
+  
+  }
+.container-imagem {
+    display: flex;
+    
+}
+
+
+
+
+.vo {
+
+    width: 450px;
+    height: auto;
+    left: 50px;
+    border-radius: 15px;
+    size: 400px;
+    padding-left: 50px;
+    margin-left: 50px;
+}
+
+.title {
+    margin-left: 60px;
+    font-size: 42px;
+    line-height: 0.9;
+    float: left;
+    text-align: center; 
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    float: left;
+    text-align: center;
+}
+
+.section {
+    background-color: #f5f4e8;;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.container-sum{
+    background-color: #fad79a;
+    padding: 1px 5px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-left: 40px;
+    size: 40px;
+}
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 30px;
+}
+
+.section-item {
+    flex: 1 1 250px;
+    background-color: #fff9ed;
+    padding: 20px;
+    border-radius: 8px;
+  
+}
+
+.section-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.button-3 {
+    background-color: #d2df56;
+    color: #000000;
+    right: 40%;
+    top: 30px;
+    padding: 14px 23px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+.button-1 {
+    background-color: #d2df56;
+    color: #000000;
+    right: 40%;
+    top: 30px;
+    padding: 15px 107px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+.button-2 {
+    background-color: #d2df56;
+    color: #000000;
+    right: 40%;
+    top: 30px;
+    padding: 15px 115px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+.button-4 {
+    background-color: #d2df56;
+    color: #000000;
+    right: 40%;
+    top: 30px;
+    padding: 15px 80px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    
+}

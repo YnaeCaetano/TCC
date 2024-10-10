@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'polls/css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="home-icon">
+        <div>
+            <i class="fas fa-home"></i>
+        </div>
+    </div>
+    <div class="container">
+  
+      <i class="fas fa-user"></i>
+      <div class="title">
+        <h1>Entre na sua conta</h1>
+    </div>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Senha" required>
+        <button>
+            <a class="button" a href="{% url 'polls:debate'}" target="_blank">Entrar</a>
+        </button>
+        <p>Não tem uma conta? <a href="#" class="link">Crie Aqui</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quilombo Madeira</title>
+    <link rel="stylesheet" href="{% static 'polls/css/index.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-camera"></i>
+            <i class="fas fa-envelope"></i>
+            <i class="fas fa-phone"></i>
+        </div>
+        <div class="content">
+            <div class="header">
+                <div>
+                    <input type="text" placeholder="Buscar">
+                    <i class="fas fa-search"></i>
+                </div>
+                <a href="#">Doações</a>
+            </div>
+            <div class="container-imagem">
+                <img class="vo" src="{% static 'polls/images/VoMaria.jpeg'%}" alt="Imagem">
+
+                <div class="title">
+                    <h1>Quilombo Madeira</h1>
+                   <p>Com mais de 200 anos, localizado na 3. Zona do Município de Jaguarão, no Cerrito. Reconhecido
+                        pela Fundação Cultural Palmares desde 2009.</p>
+
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">
+                    <h2>Sumário</h2>
+                </div>
+                <div class="section-content">
+                    <div class="section-item">
+                        <img src="{% static 'polls/images/quilombo.jpg'%}">
+                        <button class="button">Sobre nós</button>
+                    </div>
+                    <div class="section-item">
+                        <img src="{% static 'polls/images/eventos.jpg'%}">
+                        <button class="button">Eventos</button>
+                    </div>
+                    <div class="section-item">
+                        <img src="{% static 'polls/images/artesanatos.jpg'%}" alt="Image of vegetables">
+                        <button class="button">Artesanatos, Verduras e Legumes</button>
+                    </div>
+                    <div class="section-item">
+                        <img src="{% static 'polls/images/conversa.jpg'%}">
+                        <button class="button">Vamos Conversar?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
