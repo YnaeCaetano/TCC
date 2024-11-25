@@ -16,15 +16,15 @@ body {
 
 .container {
     background-color: #fff;
-    padding: 40px 20px;
-    border-radius: 30px;
+    padding: 60px 20px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 350px;
+    width: 800px;
+    align-items: center;
 }
 .perfil-icon {
+    align-items: center;
     font-size: 100px;
-
 }
 .title {
     text-align: center;
@@ -35,14 +35,13 @@ body {
 input { 
     background-color: #fad79a;
     color: #0a0a09;
-    width: 80%;
+    width: 30%;
     padding: 10px;
     margin-bottom: 15px;
     border:none;
     border-radius: 20px;
     box-sizing: border-box;
 }
-
 .button {
     background-color: #d2df56;
     color: #000000;
@@ -63,53 +62,4 @@ input {
     opacity: 0.7;
     box-shadow: 0 0 4px rgb(234, 165, 165)
     
-}
-.logar{
-    margin-top: 45px;
-    font-size: 18px;
-}
-.link{
-    font-size: 15px;
-}
-.link a {
-    color: #555;
-    text-decoration: underline;
-}
-.link a:hover {
-    color: #fdbdbd;
-    text-decoration: underline;
-}
-.content-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-}
-
-.content-box .form-box {
-    width: 50%;
-}
-
-.container .ul {
-    display: flex;
-    margin-left: 72px;
-}
-
-.container .ul li {
-    list-style: none;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    left: 50px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.container.ul li:hover {
-    background: #3a3636;
-}
-
-.container .ul li img {
-    width: 28px;
 }

@@ -6,26 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="{% static 'polls/css/login.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" type="imagex/png" href="{% static 'polls/images/logo.ico'%}">    
 </head>
 <body>
-    <div class="home-icon">
-        <div>
-            <i class="fas fa-home"></i>
+    
+        <div class="home-icon">
+            <i class="bi bi-house-heart-fill"></i>
+            <a href="{% url 'polls:cadastro' %}"></a>
         </div>
     </div>
     <div class="container">
-  
-      <i class="fas fa-user"></i>
-      <div class="title">
-        <h1>Entre na sua conta</h1>
+        <div class="perfil-icon">
+            <i class="bi bi-person-circle"> </i> 
+    </div>     
+        <div class="title">
+        <h2>Entre na sua conta</h2>
     </div>
+    <div>
         <input type="email" placeholder="Email" required>
         <input type="password" placeholder="Senha" required>
-        <button>
-            <a class="button" a href="{% url 'polls:debate'}" target="_blank">Entrar</a>
-        </button>
-        <p>Não tem uma conta? <a href="#" class="link">Crie Aqui</a></p>
+    </div>
+        <div class="item">
+        <a class="button" a href="{% url 'polls:index' %}" target="_blank">Entrar</a>
+    </div>
+
+    <div class="logar">
+    <p>Logar Com</p>
+</div>
+                <ul class="ul">
+                    <li><img src="{% static 'polls/images/facebook.png'%}"></li>
+                    <li><img src="{% static 'polls/images/google.png'%}"></li>
+                </ul>
+
+    <div class="link">
+        <p>Não tem uma conta? <a href="{% url 'polls:cadastro' %}" target="_blank">Crie Aqui</a></p>
+    </div>
     </div>
 </body>
 </html>

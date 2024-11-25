@@ -1,0 +1,264 @@
+
+body {
+  font-family: open-sans;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  background-color: #f3f6f4;
+}
+
+.content{
+  background-color: #0b71aa;
+}
+
+.header {
+  color: #0b71aa;
+  background-color: #0b71aa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.header input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  margin-left: 100px;
+  border-radius: 15px;
+  width: 750px;
+  font-size: 85%;
+  padding-left: 30px;
+
+}
+
+.header i {
+  font-size: 20px;
+  background-color: #f0ecec;
+}
+
+nav{
+  background-color:#0b71aa;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  word-spacing: 3px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 10px;
+}
+.sidebar {
+  height: 95%; /* Altura total da página */
+  width: 25%; /* Largura inicial do menu (fechado) */
+  background-color: #f3f6f4; /* Cor de fundo escura */
+  padding-top: 60px; /* Espaçamento no topo do menu */
+  align-items: center;
+}
+
+/* Links dentro da sidebar */
+.sidebar a {
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #000000;
+  display: block;
+
+}
+.topic-card {
+  padding: 10px;
+  margin-bottom: 10px; 
+}
+
+.topic-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.topic-card ul li {
+  margin-bottom: 10px;
+ text-decoration: none;
+}
+
+.container {
+   display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    margin-left: 30px;
+    gap: 30px;
+}
+
+.header {
+ background-color: #f0f0f0;
+ padding: 10px;
+ border-bottom: 1px solid black;
+} 
+
+.content {
+ padding: 10px;
+ background-color: lightgray;
+ text-decoration:none;
+}
+
+  .container2 {
+ border: 1px solid black;
+ width: 80%;
+ margin: 50px auto;
+}
+
+.header2 {
+ background-color: #f0f0f0;
+ padding: 10px;
+ border-bottom: 1px solid black;
+} 
+
+.content2 {
+ padding: 10px;
+ background-color: lightgray;
+ text-decoration:none;
+}
+
+.container3 {
+ border: 1px solid black;
+ width: 80%;
+ margin: 50px auto;
+}
+
+.header3 {
+ background-color: #f0f0f0;
+ padding: 10px;
+ border-bottom: 1px solid black;
+} 
+
+.content3 {
+ padding: 10px;
+ background-color: lightgray;
+ text-decoration:none;
+}
+
+.container4 {
+ border: 1px solid black;
+ width: 80%;
+ margin: 50px auto;
+}
+
+.header4 {
+ background-color: #f0f0f0;
+ padding: 10px;
+ border-bottom: 1px solid black;
+} 
+
+.content4 {
+ padding: 10px;
+ background-color: lightgray;
+ text-decoration:none;
+}
+
+.container5 {
+ border: 1px solid black;
+ width: 80%;
+ margin: 50px auto;
+}
+
+.header5 {
+ background-color: #f0f0f0;
+ padding: 10px;
+ border-bottom: 1px solid black;
+} 
+
+.content5 {
+ padding: 10px;
+ background-color: lightgray;
+ text-decoration:none;
+}
+
+.container6 {
+ border: 1px solid black;
+ width: 80%;
+ margin: 50px auto;
+}
+
+.header6 {
+ background-color: #f0f0f0;
+ padding: 10px;
+ border-bottom: 1px solid black;
+} 
+
+.content6 {
+ padding: 10px;
+ background-color: lightgray;
+ text-decoration:none;
+}
+
+.container7 {
+ border: 1px solid black;
+ width: 80%;
+ margin: 50px auto;
+}
+
+.header7 {
+ background-color: #f0f0f0;
+ padding: 10px;
+ border-bottom: 1px solid black;
+} 
+
+.content7 {
+ padding: 10px;
+ background-color: lightgray;
+ text-decoration:none;
+}
+
+.container8 {
+ border: 1px solid black;
+ width: 80%;
+ margin: 50px auto;
+}
+
+.header8 {
+ background-color: #f0f0f0;
+ padding: 10px;
+ border-bottom: 1px solid black;
+} 
+
+.content8 {
+ padding: 10px;
+ background-color: lightgray;
+ text-decoration:none;
+}
+
+.container9 {
+ border: 1px solid black;
+ width: 80%;
+ margin: 50px auto;
+}
+
+.header9 {
+ background-color: #f0f0f0;
+ padding: 10px;
+ border-bottom: 1px solid black;
+} 
+
+.content9 {
+ padding: 10px;
+ background-color: lightgray;
+ text-decoration:none;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 150px;
+}
+
+.product-card {
+ 
+  margin: 1%;
+  padding: 20px;
+  float: left;
+  background-color: #fff;
+  border-radius: 8px;
+}

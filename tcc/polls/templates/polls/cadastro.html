@@ -1,9 +1,109 @@
-<h1>{{ question.question_text }}</h1>
-
-<ul>
-{% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
-{% endfor %}
-</ul>
-
-<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{% static 'polls/css/cadastro.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" type="imagex/png" href="{% static 'polls/images/logo.ico'%}">    
+</head>
+<body>
+    
+        <div class="home-icon">
+            <i class="bi bi-house-heart-fill"></i>
+            <a href="{% url 'polls:index' %}"></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="perfil-icon">
+            <i class="bi bi-person-fill-add"></i>
+    </div>
+    <div class="title">
+        <h2>Crie a sua conta</h2>
+    </div>
+    <form>
+        <div class="form">
+            <input type="text" placeholder="Nome Completo">
+        </div>
+        <div>
+            <input oninput="mascara(this)" type="text" placeholder="CPF">
+            <script src="{% static 'polls/javascript/valida.js'%}"></script>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            </div>
+            <div class="form-group col-md-6">
+              <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+            </div>
+          </div>
+          <div class="form-group">
+            <h3>Endereço</h3>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Rua ou Av">
+          </div>
+          <div>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Numero">
+          </div>
+          <div>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Complemento">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Bairro">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" id="inputCity" placeholder="Cidade">
+            </div>
+            <div class="form-group col-md-2">
+                <input oninput="mascara(this)" type="text" placeholder="CEP">
+                <script src="{% static 'polls/javascript/cep.js'%}"></script>
+                <a href="descobrir-cep.html">Não sabe seu CEP?</a>
+              </div>
+            <div class="form-group col-md-4">
+              <label for="inputEstado">Estado</label>
+              <select id="inputEstado" class="form-control">
+                <option selected>Escolher...</option>
+                <option value="ac">Acre</option> 
+                <option value="al">Alagoas</option> 
+                <option value="am">Amazonas</option> 
+                <option value="ap">Amapá</option> 
+                <option value="ba">Bahia</option> 
+                <option value="ce">Ceará</option> 
+                <option value="df">Distrito Federal</option> 
+                <option value="es">Espírito Santo</option> 
+                <option value="go">Goiás</option> 
+                <option value="ma">Maranhão</option> 
+                <option value="mt">Mato Grosso</option> 
+                <option value="ms">Mato Grosso do Sul</option> 
+                <option value="mg">Minas Gerais</option> 
+                <option value="pa">Pará</option> 
+                <option value="pb">Paraíba</option> 
+                <option value="pr">Paraná</option> 
+                <option value="pe">Pernambuco</option> 
+                <option value="pi">Piauí</option> 
+                <option value="rj">Rio de Janeiro</option> 
+                <option value="rn">Rio Grande do Norte</option> 
+                <option value="ro">Rondônia</option> 
+                <option value="rs">Rio Grande do Sul</option> 
+                <option value="rr">Roraima</option> 
+                <option value="sc">Santa Catarina</option> 
+                <option value="se">Sergipe</option> 
+                <option value="sp">São Paulo</option> 
+                <option value="to">Tocantins</option> 
+              </select>
+            </div>
+           
+          </div>
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Escolha sua foto de perfl</label>
+          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+      </form>
+      <div class="item">
+        <a class="button" a href="{% url 'polls:index' %}" target="_blank">Criar</a>
+    </div>
+    </div>
+</body>
+</html>

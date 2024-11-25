@@ -1,70 +1,60 @@
-{%load static%}
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'polls/css/testes.css' %}">
-  <title>Netflix</title>
+<form id="cpfForm"></form>
+	<label for="cpf">CPF:</label>
+	<input type="text" id="cpf" name="cpf">
+	<input type="submit" value="Enviar">
+</form>
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-</head>
-<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<div class="login100-pic js-tilt" data-tilt>
-					<img src="https://colorlib.com/etc/lf/Login_v1/images/img-01.png" alt="IMG">
-				</div>
+<script>
+function validaCPF(cpf) {
+	cpf = cpf.replace(/\D+/g, '');
+	if (cpf.length !== 11) return false;
 
-				<form class="login100-form validate-form">
-					<span class="login100-form-title">
-						Entre na sua conta
-					</span>
+	let soma = 0;
+	let resto;
+	if (/^(\d)\1{10}$/.test(cpf)) return false;
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="Email">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
-						</span>
-					</div>
+	for (let i = 1; i <= 9; i++) soma += parseInt(cpf.substring(i-1, i)) * (11 - i);
+	resto = (soma * 10) % 11;
+	if ((resto === 10) || (resto === 11)) resto = 0;
+	if (resto !== parseInt(cpf.substring(9, 10))) return false;
 
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
+	soma = 0;
+	for (let i = 1; i <= 10; i++) soma += parseInt(cpf.substring(i-1, i)) * (12 - i);
+	resto = (soma * 10) % 11;
+	if ((resto === 10) || (resto === 11)) resto = 0;
+	if (resto !== parseInt(cpf.substring(10, 11))) return false;
 
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
-					</div>
+	return true;
+}
 
-					<div class="text-center p-t-12">
-						<span class="txt1">
-							Esqueceu
-						</span>
-						<a class="txt2" href="#">
-							Sua Senha
-						</a>
-					</div>
+document.addEventListener('DOMContentLoaded', function() {
+	document.getElementById('cpfForm').addEventListener('submit', function(e) {
+		var cpf = document.getElementById('cpf').value;
+		if (!validaCPF(cpf)) {
+			e.preventDefault();
+			alert('CPF inválido. Verifique o número digitado.');
+			document.getElementById('cpf').focus();
+		}
+	});
 
-					<div class="text-center p-t-136">
-						<a class="txt2" href="#">
-							Não tem uma conta? Crie uma Aqui
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+	document.getElementById('cpf').addEventListener('input', function(e) {
+		var value = e.target.value;
+		var cpfPattern = value.replace(/\D/g, '')
+							  .replace(/(\d{3})(\d)/, '$1.$2')
+							  .replace(/(\d{3})(\d)/, '$1.$2')
+							  .replace(/(\d{3})(\d)/, '$1-$2')
+							  .replace(/(-\d{2})\d+?$/, '$1');
+		e.target.value = cpfPattern;
+	});
+});
+</script>
 
-</html>
+<div id="mySidebar" class="sidebar">
+   
+    <i class="fas fa-user"></i>
+    <a href="{% url 'polls:login' %}" target="_blank">Entre</a>
+    <i class="fas fa-shopping-cart"></i>
+    <i class="fas fa-camera"></i>
+    <i class="fas fa-envelope"></i>
+    <i class="fas fa-phone"></i> 
+  </div>

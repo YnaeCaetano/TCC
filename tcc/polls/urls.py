@@ -5,11 +5,11 @@ app_name = "polls"
 
 urlpatterns = [
     # ex: /polls/
-    path("", views.index, name="index"),
+    path("index", views.index, name="index"),
     # ex: /polls/5/
     path("login", views.login, name="login"),
 
-    path("testes", views.testes, name="testes"),
+    path("anna", views.anna, name="anna"),
 
     path("sobre", views.sobre, name="sobre"),
 
@@ -18,6 +18,8 @@ urlpatterns = [
     path("eventos", views.eventos, name="eventos"),
 
     path("cadastro", views.cadastro, name="cadastro"),
+
+    path("debate", views.debate, name="debate"),
 
 
 ]

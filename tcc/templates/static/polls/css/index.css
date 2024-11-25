@@ -1,3 +1,91 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');*/
+
+/* Cores do projeto Quilombo
+Amarelo: #f5f4e8
+Amarelo Escuro: #7c5217
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+nav.menu-lateral{
+    width: 80px;
+    height: 100%;
+    background-color: #7c5217;
+    padding: 40px 0 40px 1%;
+    
+    box-shadow: 3px 0 0 #7c5217;
+    z-index: 1; /* Garante que o menu fica acima de outros elementos */
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .2s;
+}
+
+nav.menu-lateral.expandir{
+    width: 300px;
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i{
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+
+}
+
+ul li.item-menu:hover {
+    background: #f0dec4;
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.ativo{
+    background-color: #7c5217;
+}
+
+ul li.item-menu a{
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 70px;
+    transition: .5s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link {
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i {
+    font-size: 30px;
+    margin-top: 80px;
+} 
+
+
 body {
     font-family: sans-serif;
     margin: 0;
@@ -88,22 +176,6 @@ body {
    
 }
 
-.header input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    margin-left: 100px;
-    border-radius: 15px;
-    width: 900px;
-    font-size: 85%;
-    padding-left: 30px;
-
-}
-
-.header i {
-    font-size: 20px;
-    background-color: #f0ecec;
-}
-
 button{
     position:absolute;
     margin-left: 1250px;
@@ -139,29 +211,27 @@ button{
 
 
 .vo {
-
     width: 450px;
-    height: auto;
-    left: 50px;
     border-radius: 15px;
-    size: 400px;
-    padding-left: 50px;
-    margin-left: 50px;
+    margin-left: 100px;
 }
 
 .title {
-    margin-left: 60px;
-    font-size: 42px;
-    line-height: 0.9;
+    font-size: 45px;
+    line-height: 1.5;
     float: left;
     text-align: center; 
+    margin-top: 30px;
+
 }
 
 .description {
-    font-size: 16px;
+    font-size: 15.7px;
     line-height: 1.5;
     float: left;
     text-align: center;
+    margin-top: 40px;
+    margin-left: 40px;
 }
 
 .section {
@@ -173,17 +243,16 @@ button{
 
 .container-sum{
     background-color: #fad79a;
-    padding: 1px 5px;
+    width: 95.5%;
+    padding: 10px;
     border-radius: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-top: 40px;
-    margin-left: 40px;
-    size: 40px;
+    margin-left: 50px;
 }
 .section-title {
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -268,3 +337,29 @@ button{
     text-decoration: none;
     
 }
+.submit-lente {
+    font-size: 15px;
+    position:absolute;
+    top:3px; right: 14px;
+    z-index:10;
+    border:none;
+    background: transparent;
+    outline:none;
+  }
+  
+  .submit-line {
+    position: relative;
+    width: 1030px;
+    }
+  
+  .submit-line input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-left: 85px;
+    border-radius: 15px;
+    width: 900px;
+    font-size: 85%;
+    padding-left: 30px;
+    outline:none;
+    
+  }
