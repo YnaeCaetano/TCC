@@ -9,8 +9,6 @@ urlpatterns = [
     # ex: /polls/5/
     path("login", views.login, name="login"),
 
-    path("anna", views.anna, name="anna"),
-
     path("sobre", views.sobre, name="sobre"),
 
     path("marketplace", views.marketplace, name="marketplace"),

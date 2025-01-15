@@ -22,12 +22,42 @@
     <div class="title">
     <h1>Sobre nós</h1>
 </div>
-<div class="img">
-        <img src="{% static 'polls/images/capa.jpg'%}" alt="Foto do Quilombo Madeira">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'polls/images/sobre.png'%}" alt="Primeiro Slide">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'polls/images/sobre2.png'%}" alt="Segundo Slide">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'polls/images/sobre3.png'%}" alt="Terceiro Slide">
+      </div>
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Próximo</span>
+    </a>
+  </div>
         <div class="description">
         <p>Somos um quilombo localizado no estado Rio Grande Do Sul, municipio de Jaguarão. É um quilombo pequeno mas que tem tanta importância quanto aos outros que tem mais integrantes. 
-            Eu Ynaê Faria Caetano, autora deste site, sou integrante do Quilombo, minha tia avó foi presidente.
+            Eu Ynaê Faria Caetano, autora deste site, sou integrante do Quilombo, minha tia avó foi presidente atualmente é falecida.
+            Estima-se que a comunidade de Vila Madeira tenha cerca de dois séculos de existência. "Meu avô nasceu na África e foi trazido para o Brasil como escravo", relata Antônio Lima de Faria. "Também lembro que meu pai participou de uma guerra, mas não sei ao certo qual foi", acrescenta. Situada na fronteira com o Uruguai, a comunidade tem suas raízes na chegada de negros vindos do país vizinho ao Rio Grande do Sul.
+
+A formação do quilombo é corroborada pela proximidade com acidentes geográficos típicos de refúgios de escravos fugitivos, como o Cerro dos Mulatinhos.
+
+As casas, construídas de madeira ou alvenaria, dispõem de energia elétrica, e a água é obtida por meio de poços. A escola está localizada a cerca de 200 metros do centro do quilombo.
+
+A produção local, voltada para o consumo próprio, trocas ou vendas, inclui milho, batata-doce, feijão, abóbora, hortaliças e algumas frutas. Além disso, os moradores criam ovelhas, porcos e galinhas. A renda da comunidade é complementada por empregos fixos fora do quilombo.
             A ideia de fazer este site partiu da vontade de ganhar visibilidade da população ao nosso quilombo e também para divulgar os produtos que o quilombo comercializa. </p>
         </div>
    

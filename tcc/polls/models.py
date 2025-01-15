@@ -4,7 +4,6 @@ class Usuario(models.Model):
     nome = models.CharField(max_length=100)
     email = models.EmailField(max_length=100, unique= True)
     senha = models.CharField(max_length=100)
-    data_nascimento = models.DateField(max_length=100)
     foto_perfi = models.ImageField(upload_to= 'imagens')
 
     def __str__(self):

@@ -9,7 +9,7 @@ function mascara(i){
     
     i.setAttribute("maxlength", "9");
     if (v.length == 5 || v.length == 10) i.value += "-";
-96300-000
+
  
  }
 	

@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'polls/css/login.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" type="imagex/png" href="{% static 'polls/images/logo.ico'%}">    
+</head>
+<body>
+    
+        <div class="home-icon">
+            <i class="bi bi-house-heart-fill"></i>
+            <a href="{% url 'polls:cadastro' %}"></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="perfil-icon">
+            <i class="bi bi-person-circle"> </i> 
+    </div>     
+        <div class="title">
+        <h2>Entre na sua conta</h2>
+    </div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p  }}
+
+        <div class="item">
+        <a class="button" a href="{% url 'polls:index' %}" target="_blank">Entrar</a>
+    </div>
+    </form>
+    <div class="logar">
+    <p>Logar Com</p>
+</div>
+                <ul class="ul">
+                    <li><img src="{% static 'polls/images/facebook.png'%}"></li>
+                    <li><img src="{% static 'polls/images/google.png'%}"></li>
+                </ul>
+
+    <div class="link">
+        <p>Não tem uma conta? <a href="{% url 'polls:cadastro' %}" target="_blank">Crie Aqui</a></p>
+    </div>
+    </div>
+</body>
+</html>

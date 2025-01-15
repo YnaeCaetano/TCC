@@ -26,8 +26,22 @@ def marketplace(request):
 def eventos(request):
     return render(request, 'polls/eventos.html')
 
-def cadastro(request):
-    return render(request, 'polls/cadastro.html')
+def cadastro(request): 
+    if request.method == "GET":
+        return render(request, 'polls/cadastro.html')
+    else:
+        nome= request.POST.get('nome')
+        CPF= request.POST.get('CPF')
+        email= request.POST.get('email')
+        senha= request.POST.get('senha')
+        rua = request.POST.get('rua')
+        numero = request.POST.get('numero')
+        complemento = request.POST.get('complemento')
+        bairro = request.POST.get('bairro')
+        cidade = request.POST.get('cidade')
+        CEP = request.POST.get(' CEP')
+        estado = request.POST.get('Estado')
+
 
 def debate(request):
     return render(request, 'polls/debate.html')

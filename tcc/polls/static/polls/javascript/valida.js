@@ -1,4 +1,4 @@
-function mascara(i){
+function mascaracpf(i){
    
     var v = i.value;
     
