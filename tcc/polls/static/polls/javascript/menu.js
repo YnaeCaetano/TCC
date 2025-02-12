@@ -1,4 +1,4 @@
-var menuItem = document.querySelectorAll('.item-menu')
+var menuItem = document.querySelectorAll('.')
 
 function selectLink() {
     menuItem.forEach((item)=>

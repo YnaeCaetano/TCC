@@ -1,7 +1,7 @@
 from django.db.models import F
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Usuario
-
+from .models import Produto
 
 
 def index(request):
@@ -13,10 +13,6 @@ def login(request):
     return render(request, 'polls/login.html')
 
 
-def anna(request):
-    return render(request, 'polls/anna.html')
-
-
 def sobre(request):
     return render(request, 'polls/sobre.html')
 
@@ -26,27 +22,50 @@ def marketplace(request):
 def eventos(request):
     return render(request, 'polls/eventos.html')
 
-def cadastro(request): 
-    if request.method == "GET":
-        return render(request, 'polls/cadastro.html')
-    else:
-        nome= request.POST.get('nome')
-        CPF= request.POST.get('CPF')
-        email= request.POST.get('email')
-        senha= request.POST.get('senha')
-        rua = request.POST.get('rua')
-        numero = request.POST.get('numero')
-        complemento = request.POST.get('complemento')
-        bairro = request.POST.get('bairro')
-        cidade = request.POST.get('cidade')
-        CEP = request.POST.get(' CEP')
-        estado = request.POST.get('Estado')
-
+def cadastro(request):
+    return render(request, 'polls/cadastro.html')
 
 def debate(request):
     return render(request, 'polls/debate.html')
 
+def teste(request):
+    return render(request, 'polls/teste.html')
 
+def perfil(request):
+    return render(request, 'polls/perfil.html')
 
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import Produto
+
+def produto_detalhe(request):
+    return render(request, 'polls/produto_detalhe.html')
+
+def adicionar_ao_carrinho(request, produto_id):
+    produto = get_object_or_404(Produto, id=produto_id)
+    # Lógica para adicionar ao carrinho (exemplo: salvar na sessão)
+    carrinho = request.session.get('carrinho', {})
+    carrinho[produto_id] = {'nome': produto.nome, 'preco': str(produto.preco)}
+    request.session['carrinho'] = carrinho
+    return redirect('produto_detalhe', produto_id=produto.id)
+
+def comprar(request, produto_id):
+    produto = get_object_or_404(Produto, id=produto_id)
+    # Lógica de finalização da compra (exemplo: redirecionar para checkout)
+    return redirect('checkout')
+
+def carrinho(request):
+    return render(request, 'polls/carrinho.html')
+
+def remover_do_carrinho(request, produto_id):
+    carrinho = request.session.get('carrinho', {})
+
+    if str(produto_id) in carrinho:
+        del carrinho[str(produto_id)]
+        request.session['carrinho'] = carrinho
+
+    return redirect('carrinho')
+
+def checkout(request):
+    return render(request, 'checkout.html')
 
     

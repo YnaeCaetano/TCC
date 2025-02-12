@@ -15,7 +15,7 @@ def cadastro(request):
             user = form.save()
             login(request, user) 
             print(user)
-            return redirect('polls:login')
+            return redirect('polls:index')
             
     else:
          form = UsuarioPersonalizadoCreationForm() 
@@ -37,17 +37,19 @@ def cadastro(request):
 
 def user_login(request):
     if request.method =='POST':
-      form = UsuarioPersonalizadoAuthenticationForm(request, request.POST)
-      if form.is_valid():
-          username = form.cleaned_data['usename']
+        form = UsuarioPersonalizadoAuthenticationForm(request, request.POST)
+        if form.is_valid():    
+          username = form.cleaned_data['username']
           password = form.cleaned_data['password']
           user = authenticate(request, username=username, password=password)
 
           if user is not None:
               login(request, user)
-              return redirect('polls:index')
-        
+              return redirect('polls:index')        
     else:
-        form = UsuarioPersonalizadoCreationForm() 
-        return render(request, 'usuarios/cadastro.html', {'form': form})
+        form = UsuarioPersonalizadoAuthenticationForm() 
+    return render(request, 'usuarios/login.html', {'form': form})
    
+def sair(request):
+    logout(request)
+    return redirect('usuarios:login')

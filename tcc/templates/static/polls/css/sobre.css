@@ -5,7 +5,35 @@ body {
     padding: 0;
     background-color: #fff8e7;
 }
-
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel img {
+    width: 100%;
+    border-radius: 10px;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
 .container {
     max-width: 800px;
     margin: 20px auto;

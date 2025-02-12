@@ -10,80 +10,135 @@ Amarelo Escuro: #7c5217
     box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
 }
-
-nav.menu-lateral{
+.btn-expandir > i{
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+}
+.sidebar {
     width: 80px;
-    height: 100%;
-    background-color: #7c5217;
+    height: 150%;
+    background-color: #774110;
     padding: 40px 0 40px ;
     align-items: center;
-    box-shadow: 2px 0 0 #fbfbfa;
+    box-shadow: 2px 0 0 #774110;
     z-index: 1; /* Garante que o menu fica acima de outros elementos */
     position: fixed;
     top: 0;
     left: 0;
     overflow: hidden;
     transition: .2s;
-}
+    }
 
-nav.menu-lateral.expandir{
-    width: 300px;
-}
+    .sidebar.open {
+      width: 300px;
+    }
 
-.btn-expandir{
-    width: 100%;
-    padding-left: 10px;
-}
+    .toggle-btn {
+      margin: -10%;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: rgb(0, 0, 0);
+      font-size: 24px;
+      align-self: flex-end;
+    }
 
-.btn-expandir > i{
-    color: #000;
-    font-size: 24px;
-    cursor: pointer;
-}
+    .profile {
+    margin-bottom: 80%;
+      margin-top: 16px;
+      text-align: center;
+      transition: all 0.3s;
+      width: 100%;
+    }
 
-ul{
-    height: 100%;
-    list-style-type: none;
+    .profile img {
+      border-color: transparent;
+      transition: all 0.3s;
+      width: 32px;
+      height: 32px;
+      background: transparent;
+      margin-top: 10%;
+    }
 
-}
+    .sidebar.open .profile img {
+      width: 74px;
+      height: 74px;
+      background: transparent;
+    }
 
-ul li.item-menu:hover {
-    background: #976520;
-}
+    .profile-info {
+      display: none;
+    }
 
-ul li.item-menu{
-    transition: .2s;
-}
+    .profile .text{
+        display: none;
+      }
 
-ul li.ativo{
-    background-color: transparent;
-}
+      .profile a{
+        display: none;
+      }
 
-ul li.item-menu a{
-    color: #000;
-    text-decoration: none;
+    .sidebar.open .profile-info {
+      display: block;
+      margin-top: 8px;
+      color: white;
+    }
+
+    .menu {
+      margin-top: 32px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    .menu-item:hover {
+      background-color: #774110;
+    }
+
+    .menu-item span.icon {
+      display: inline;
+      font-size: 25px;
+      margin-left: 10px;
+    }
+
+    .menu-item span.text {
+      margin-left: 16px;
+      display: none;
+    }
+
+    .sidebar.open .menu-item span.text {
+      display: inline;
+    }
+
+    .menu.bottom {
+      margin-bottom: 16px;
+    }
+    .sidebar.open .profile a {
+    display: block;
     font-size: 20px;
-    padding: 20px 4%;
-    display: flex;
+    margin-top: 10px;
+    text-decoration: underline;
+    color: black;
+}
+.sidebar.open .profile span.text {
+    display: block;
+    font-size: 20px;
     margin-bottom: 20px;
-    line-height: 40px;
+    color: black;
 }
-
-ul li.item-menu a .txt-link {
-    margin-left: 70px;
-    transition: .5s;
-    opacity: 0;
-}
-
-nav.menu-lateral.expandir .txt-link {
-    margin-left: 40px;
-    opacity: 1;
-}
-
-ul li.item-menu a .icon > i {
-    font-size: 30px;
-    margin-top: 80px;
-} 
 
 
 body {
@@ -103,64 +158,13 @@ body {
     margin-left: 30px;
     gap: 30px;
 }
-.sidebar {
-    height: 95%; /* Altura total da página */
-    width: 5%; /* Largura inicial do menu (fechado) */
-    position: fixed; /* Fixa o menu na lateral esquerda */
-    z-index: 1; /* Garante que o menu fica acima de outros elementos */
-    top: 0;
-    left: 0;
-    background-color: #7c5217; /* Cor de fundo escura */
-    overflow-x: hidden; /* Esconde conteúdo que passar dos limites */
-    transition: 0.5s; /* Transição suave na abertura e fechamento */
-    padding-top: 60px; /* Espaçamento no topo do menu */
-    align-items: center;
-  }
-  
-  /* Links dentro da sidebar */
-  .sidebar a {
-   
-    text-decoration: none;
-    font-size: 25px;
-    color: #000000;
-    display: block;
-    transition: 0.3s;
-    text-align: center;
-  }
-  .sidebar i {
-    font-size: 24px; 
+
+.icon1{
+    font-size: 30px;
+    margin-left: 20px; 
     margin-bottom: 30px;
+    align-items: center;
 }
-  
-  /* Mudança de cor dos links ao passar o mouse */
-  .sidebar a:hover {
-    color: #f1f1f1;
-  }
-  
-  /* Botão de fechar (x) na parte superior */
-  .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  /* Estilo do conteúdo principal */
-  /*#main {
-    transition: margin-left .5s;
-    padding: 16px;
-  }
-  
-  /* Quando o menu lateral é aberto */
-  .sidebar-open {
-    width: 250px; /* Largura ao abrir */
-  }
-  
-  /* Quando o conteúdo principal é empurrado pelo menu lateral */
-  /*#main.sidebar-open {
-   position: relative; /* Empurra o conteúdo quando o menu está aberto */
-  
 
 .content {
     flex: 1;

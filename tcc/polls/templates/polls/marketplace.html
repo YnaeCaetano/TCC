@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{% static 'polls/css/marketplace.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" type="imagex/png" href="{% static 'polls/images/logo.ico'%}">    
+
 </head>
 <body>
     <div class="banner">
@@ -97,47 +99,56 @@
     <div class="product-card">
       <img src="{% static 'polls/images/alface.jpg'%}" alt="Alface">
       <p>Alface produzida sem agrotoxicos</p>
-      <a class="button" a href="{% url 'polls:sobre' %}" target="_blank">Comprar</a>
+      <p>R$4,99</p>
+      <a class="button" a href="{% url 'polls:produto_detalhe' %}" target="_blank">Comprar</a>
     </div>
     <div class="product-card">
       <img src="{% static 'polls/images/sabao.jpg'%}" alt="Artesanato">
       <p>Artesanato feito à mão</p>
-      <a class="button" a href="{% url 'polls:sobre' %}" target="_blank">Comprar</a>
+      <p>R$4,00</p>
+      <a class="button" a href="{% url 'polls:produto_detalhe' %}" target="_blank">Comprar</a>
     </div>
     <div class="product-card">
       <img src="{% static 'polls/images/cesta.jpg'%}" alt="Cesta">
-      <p>Cesta de palha</p>
-      <a class="button" a href="{% url 'polls:sobre' %}" target="_blank">Comprar</a>
+      <p>Cesto trabalhado no bambu</p>
+      <p>R$10,00</p>
+      <a class="button" a href="{% url 'polls:produto_detalhe' %}" target="_blank">Comprar</a>
     </div>
     <div class="product-card">
         <img src="{% static 'polls/images/mostarda.png'%}" alt="mostarda">
         <p>Cesta de palha</p>
-        <a class="button" a href="{% url 'polls:sobre' %}" target="_blank">Comprar</a>
+        <p>R$5,00</p>
+        <a class="button" a href="{% url 'polls:produto_detalhe' %}" target="_blank">Comprar</a>
       </div>
       <div class="product-card">
         <img src="{% static 'polls/images/baiano.jpg'%}" alt="baiano">
-        <p>Cesta de palha</p>
-        <a class="button" a href="{% url 'polls:sobre' %}" target="_blank">Comprar</a>
+        <p>Boneca de ceramica</p>
+        <p>R$40,00</p>
+        <a class="button" a href="{% url 'polls:produto_detalhe' %}" target="_blank">Comprar</a>
       </div>
       <div class="product-card">
         <img src="{% static 'polls/images/abobora.jpg'%}" alt="baiano">
-        <p>Cesta de palha</p>
-        <a class="button" a href="{% url 'polls:sobre' %}" target="_blank">Comprar</a>
+        <p>Abobora</p>
+        <p>R$7,00</p>
+        <a class="button" a href="{% url 'polls:produto_detalhe' %}" target="_blank">Comprar</a>
       </div>
       <div class="product-card">
         <img src="{% static 'polls/images/gola.webp'%}" alt="baiano">
-        <p>Cesta de palha</p>
-        <a class="button" a href="{% url 'polls:sobre' %}" target="_blank">Comprar</a>
+        <p>Gola trabalhada na lã</p>
+        <p>4,99</p>
+        <a class="button" a href="{% url 'polls:produto_detalhe' %}" target="_blank">Comprar</a>
       </div>
       <div class="product-card">
         <img src="{% static 'polls/images/artesanato2.jfif'%}" alt="baiano">
-        <p>Cesta de palha</p>
-        <a class="button" a href="{% url 'polls:sobre' %}" target="_blank">Comprar</a>
+        <p>Bolsa trabalhado no croche</p>
+        <p>50,00</p>
+        <a class="button" a href="{% url 'polls:produto_detalhe' %}" target="_blank">Comprar</a>
       </div>
       <div class="product-card">
         <img src="{% static 'polls/images/milho.jpg'%}" alt="baiano">
-        <p>Cesta de palha</p>
-        <a class="button" a href="{% url 'polls:sobre' %}" target="_blank">Comprar</a>
+        <p>Milho</p>
+        <p>5,99</p>
+        <a class="button" a href="{% url 'polls:produto_detalhe' %}" target="_blank">Comprar</a>
       </div>
     </div>
 </div>

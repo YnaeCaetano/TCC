@@ -13,39 +13,56 @@
 </head>
 
 <body>
-    <nav class="menu-lateral">
-        <div class="btn-expandir">
-            <i class="bi bi-list" id="btn-exp"></i>
+   
+ 
+     
+    <div class="sidebar" id="sidebar">
+        <button class="toggle-btn" id="toggle-btn">☰</button>
+        <div class="profile">
+          <img src="{% static 'polls/images/perfil.png'%}" alt="Profile">
+          {% if user.is_authenticated %}
+          <span class="text">  Bem vindo(a) {{ user.nome }}!</span>
+          <a href="{% url 'polls:perfil' %}">Editar Perfil</a>
+          <a href="{% url 'polls:sobre' %}" target="_blank">Configurações</a>
+          <a href="{% url 'polls:debate' %}" target="_blank">Ajuda</a>
+          {% else %}
+          <div class="profile-info">
+
+            <a href="{% url 'usuarios:login' %}">Entre</a>
+              <span class="text">ou</span>
+              <a href="{% url 'usuarios:cadastro' %}">Cadastre-se</a>
+          </div>
+          {% endif %}
         </div>
-
-        <ul>
-            <li class="item-menu ativo">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-person-circle"></i></span>
-                    <span class="txt-link"><a href="{% url 'polls:login' %}" target="_blank">Entre</a></span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-cart4"></i></span>
-                    <span class="txt-link">Dashboard</span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-calendar3"></i></span>
-                    <span class="txt-link">Agenda</span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-gear"></i></span>
-                    <span class="txt-link">Configurações</span>
-                </a>
-            </li>
-        </ul>
-
-    </nav>
+        <div class="menu">
+          <div class="menu-item">
+            <span class="icon"><i class="bi bi-cart4"></i></span>
+            <span class="text">Carrinho</span>
+          </div>
+        </div>
+        <div class="menu bottom">
+          <div class="menu-item">
+            <span class="icon"><i class="bi bi-instagram"></i></span>
+            <span class="text">@quilombo_madeira</span>
+          </div>
+          <div class="menu-item">
+            <span class="icon"><i class="bi bi-envelope-fill"></i></span>
+            <span class="text">quilombomadeira@gmail.com</span>
+          </div>
+          <div class="menu-item">
+            <span class="icon"><i class="bi bi-facebook"></i></span>
+            <span class="text">Quilombo Madeira</span>
+          </div>
+        </div>
+      </div>
+      <script>
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('toggle-btn');
+    
+        toggleBtn.addEventListener('click', () => {
+          sidebar.classList.toggle('open');
+        });
+      </script>
 
 
 

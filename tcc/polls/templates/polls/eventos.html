@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos do Quilombo</title>
+    <link rel="stylesheet" href="{% static 'polls/css/eventos.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="imagex/png" href="{% static 'polls/images/logo.ico'%}">
+</head>
+<body>
+    <div class="banner">
+        <style>
+        .banner {
+            background-image: url("{% static 'polls/images/eventos.jpg'%}"); /* Substitua "sua-imagem.jpg" pelo caminho da sua imagem */
+            background-size: cover;
+            height: 60px; /* Ajuste a altura conforme necessário */
+          }
+        </style>
+    </div> 
+    <div class="container">
+        <h2>Aqui estão os eventos que o quilombo participa e promove:</h2>
+
+        <div class="event">
+            <img src="{% static 'polls/images/consciência.jpg'%}" alt="Dia da Consciência Negra">
+            <div class="event-content">
+                <h3>Dia da Consciência Negra</h3>
+                <p>Será realizado no dia 20 de novembro de 2025, no lugar... estaremos reunidos debatendo e relembrando nossa causa para que esse dia fosse respeitado.</p>
+            </div>
+            <div class="event-actions">
+                <button>+</button>
+                <button>❤</button>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="{% static 'polls/images/event.jpg'%}"alt="Outro Evento">
+            <div class="event-content">
+                <h3>Outro Evento</h3>
+                <p>Detalhes sobre este evento serão fornecidos em breve.</p>
+            </div>
+            <div class="event-actions">
+                <button>+</button>
+                <button>❤</button>
+            </div>
+        </div>
+
+        <div class="no-events">No momento não há eventos disponíveis:</div>
+    </div>
+</body>
+</html>

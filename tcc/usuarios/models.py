@@ -1,5 +1,7 @@
 from django.db import models
+from .validators import validate_cpf
 from django.contrib.auth.models import AbstractUser, BaseUserManager, PermissionsMixin
+from cpf_field.models import CPFField
 
 # Create your models here.
 
@@ -22,10 +24,11 @@ class UsuarioPersonalizadoManager(BaseUserManager):
         return self.create_user(email, password, **extra_fields)
     
 class UsuarioPersonalizado(AbstractUser, PermissionsMixin):
+    username = None
     nome = models.CharField(max_length= 50, blank= True)
     last_name = models.CharField(max_length=50, blank=True)
     email = models.EmailField(unique=True)
-    cpf = models.CharField(max_length=14, blank= True)
+    CPF = CPFField('CPF')
     is_active = models.BooleanField (default=True)
     is_staff = models.BooleanField(default=False)
 
@@ -36,3 +39,15 @@ class UsuarioPersonalizado(AbstractUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
+
+
+class CPFField(models.CharField):
+    default_validators = [validate_cpf]
+
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('max_length', 14)
+        super().__init__(*args, **kwargs)
+
+
+class MyModel(models.Model):
+    cpf = CPFField('CPF')

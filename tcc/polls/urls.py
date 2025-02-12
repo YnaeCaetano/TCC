@@ -19,5 +19,14 @@ urlpatterns = [
 
     path("debate", views.debate, name="debate"),
 
+    path("teste", views.teste, name="teste"),
 
+    path("perfil", views.perfil, name="perfil"),
+
+    path('produto', views.produto_detalhe, name='produto_detalhe'),
+
+    path('carrinho/', views.carrinho, name='carrinho'),
+
+    path('checkout/', views.checkout, name='checkout'),
 ]
+
