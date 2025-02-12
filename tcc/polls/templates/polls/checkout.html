@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2>💳 Finalizar Compra</h2>
+    <p>Confira seus produtos antes de finalizar a compra.</p>
+    
+    {% for key, item in request.session.carrinho.items %}
+        <p>{{ item.nome }} - {{ item.quantidade }}x R$ {{ item.preco }}</p>
+    {% endfor %}
+    
+    <form action="{% url 'processar_pagamento' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Pagar</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5ebdb;
+    margin: 0;
+    padding: 20px;
+}
+
+.produto-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: auto;
+}
+
+.produto-imagem img {
+    width: 500px;
+    border-radius: 10px;
+}
+
+.produto-detalhes {
+    margin-left: 5%;
+    padding-left: 20px;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.avaliacao {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.estrelas {
+    color: orange;
+    margin-left: 5px;
+}
+
+.reportar {
+    margin-left: auto;
+    font-size: 12px;
+    color: red;
+text-decoration: none;
+}
+
+.cor {
+    border: 1px solid black;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    background: none;
+}
+
+.quantidade {
+    border: 1px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: none;
+}
+
+.quantidade-numero {
+    margin: 0 10px;
+}
+
+.comprar, .carrinho {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.comprar {
+    margin-top: 5%;
+    background-color: #c4d82e;
+}
+
+.carrinho {
+    background-color: #c4d82e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone {
+    margin-right: 5px;
+}

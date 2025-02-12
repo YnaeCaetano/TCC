@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="{% static 'polls/css/carrinho.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" type="imagex/png" href="{% static 'polls/images/logo.ico'%}">    
+</head>
+<body>
+    <div class="banner">
+        <style>
+        .banner {
+            background-image: url("{% static 'polls/images/artesanatos.jpg'%}"); /* Substitua "sua-imagem.jpg" pelo caminho da sua imagem */
+            background-size: cover;
+            top: 0%;
+            height: 50px; /* Ajuste a altura conforme necessário */
+          }
+        </style>
+    </div>
+    <div class="cart-container">
+        <h2>Carrinho de compras</h2>
+        <input type="text" class="search" placeholder="Buscar...">
+        <div class="cart-item selected">
+            <input type="checkbox" checked>
+            <img src="{% static 'polls/images/alface.jpg'%}" alt="Alface">
+            <p>Alface produzida sem agrotóxicos</p>
+            <div class="quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </div>
+            <span class="price">R$4,99</span>
+            <button class="delete"><i class="bi bi-trash3"></i></button>
+        </div>
+        <div class="cart-item">
+            <input type="checkbox">
+            <img src="{% static 'polls/images/manta.jpg'%}" alt="Manta de tricô">
+            <p>Manta feita de tricô</p>
+            <div class="quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </div>
+            <span class="price">R$50,00</span>
+            <button class="delete"><i class="bi bi-trash3"></i></button>
+        </div>
+        <div class="total">Total(1 item): <span>R$4,99</span></div>
+        <button class="continue">Continuar →</button>
+    </div>
+</body>
+</html>

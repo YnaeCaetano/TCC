@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5ebdb;
+    margin: 0;
+    padding: 0;
+}
+.home-icon{
+    position: absolute;
+    top:60px;
+    left: 10px;
+    font-size: 30px;
+    color: black; 
+}
+
+
+header {
+    background-color: #f5ebdb;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #000;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 15%;
+}
+
+.home-icon {
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 2%;
+}
+
+nav button {
+    background: none;
+    border: 1px solid #000;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+.comentario {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #000;
+    margin-top: 15px;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-icon {
+    font-size: 24px;
+}
+
+.data {
+    font-size: 12px;
+    color: gray;
+}
+
+.texto-comentario {
+    margin: 10px 0;
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+}
+
+.acoes button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.button :hover{
+    color: #575252;
+}
+.reportar {
+    color: red;
+}
